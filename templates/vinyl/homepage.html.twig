@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	<h1>{{ title }}</h1>
+
+	{# This is a comments #}
+
+	<div>
+		Hello TWIG
+	</div>
+	<h2>Tracklist</h2>
+	<ul>
+		{% for track in tracks %}
+			<li>
+				{{ track.song }}
+				-
+				{{ track.artist }}
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
